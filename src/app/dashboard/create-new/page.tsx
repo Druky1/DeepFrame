@@ -24,6 +24,8 @@ function CreateNew() {
 
   const [caption, setCaption] = useState('');
 
+  const [imageList, setImageList] = useState<string[]>([]);
+
   const [videoScript, setVideoScript] = useState<VideoScriptItem[]>([]);
 
   const onHandleInputChange = (fieldName: any, fieldValue: any) => {
@@ -43,14 +45,15 @@ function CreateNew() {
   const getVideoScript = async () => {
     setLoading(true); // Start loading
     try {
-      const prompt = `Write a script to generate ${formData.duration} video on topic ${formData.topic} in style ${formData.imageStyle} format for each scene and give me result in JSON format with imagePrompt and ContentText as field, no plain text`;
-      console.log(prompt);
+      const prompt = `Write a script to generate ${formData.duration} video on topic ${formData.topic} in style ${formData.imageStyle} format for each scene and give me result in JSON format with imagePrompt and ContentText as field, no plain text.`;
+
       const response = await axios.post('/api/get-video-script', {
         prompt: prompt
       });
       console.log(response.data);
       setVideoScript(response.data.response);
       generateAudioFile(response.data.response);
+      generateImage(response.data.response);
     } catch (error) {
       console.error("Error fetching video script:", error);
     } finally {
@@ -93,6 +96,37 @@ function CreateNew() {
     setCaption(response?.data?.result);
     setLoading(false);
   }
+
+  const generateImage = async (videoScriptData: VideoScriptItem[]) => {
+    setLoading(true);
+    try {
+      const imageRequests = videoScriptData.map(async (item) => {
+        const response = await axios.post('/api/generate-image', {
+          prompt: item.imagePrompt
+        });
+  
+        console.log("Full API Response:", response.data); // Debugging step
+  
+        // Ensure we handle array responses correctly
+        const imageUrl = Array.isArray(response.data.result) ? response.data.result[0] : response.data.result;
+        
+        console.log("Generated image URL:", imageUrl); 
+        return imageUrl;
+      });
+  
+      // Wait for all API calls to complete
+      const images = await Promise.all(imageRequests);
+  
+      console.log("All Image URLs:", images);
+      setImageList(images); // Update state with the correct images
+    } catch (error) {
+      console.error("Error generating images:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  
 
   return (
     <div className='md:px-20'>

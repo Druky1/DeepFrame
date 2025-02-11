@@ -15,7 +15,6 @@ function Header() {
         <Button>Sign In</Button>
         <UserButton />
       </div>
-
     </div>
   )
 }
