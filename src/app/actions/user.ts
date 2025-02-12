@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from '@/db/index';
-import { Users } from '@/db/schema';
+import { Users} from '@/db/schema';
 import { eq } from 'drizzle-orm';
 
 export const checkAndInsertUser = async (name: string, email: string, imageUrl: string) => {

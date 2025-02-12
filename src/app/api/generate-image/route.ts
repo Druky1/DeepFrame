@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
 
     console.log("Image saved to Firebase:", downloadUrl);
     
-    return NextResponse.json({ result: imageUrl }, { status: 200 });
+    return NextResponse.json({ result: downloadUrl}, { status: 200 });
 
   } catch (error: any) {
     console.error("Error in generate-image API:", error.message);

@@ -19,6 +19,7 @@ function SelectDuration({onUserSelect} : any) {
           <SelectValue placeholder="Duration" />
         </SelectTrigger>
         <SelectContent>
+          <SelectItem value="15 seconds" className="font-semibold">15 seconds</SelectItem>
           <SelectItem value="30 seconds" className="font-semibold">30 seconds</SelectItem>
           <SelectItem value="60 seconds" className="font-semibold">60 seconds</SelectItem>
         </SelectContent>
