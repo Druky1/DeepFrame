@@ -20,7 +20,7 @@ function CreateNew() {
   const [formData, setFormData] = useState<Record<string, any>>({});
   const [loading, setLoading] = useState(false);
   const { setVideoData } = useContext(VideoDataContext);
-  const [playVideo, setPlayVideo] = useState(true);
+  const [playVideo, setPlayVideo] = useState(false);
   const [videoId, setVideoId] = useState("15");
 
   const onHandleInputChange = (fieldName: any, fieldValue: any) => {

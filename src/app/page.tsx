@@ -1,7 +1,13 @@
-import Header from "./_components/Header"
+import Features from "./_components/Features";
+import Header from "./_components/Header";
+import Hero from "./_components/Hero";
 
 export default function Home() {
   return (
-    <Header />
-  )
+    <>
+      <Header />
+      <Hero />
+      <Features/>
+    </>
+  );
 }
