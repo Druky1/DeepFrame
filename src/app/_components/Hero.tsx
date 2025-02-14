@@ -27,7 +27,7 @@ function Hero() {
           generate videos with your own customization and style, in just a few
           clicks.
         </TextAnimate>
-        <Link href="/sign-in">
+        <Link href="/sign-in" className="inline-block">
           <ShimmerButton
             className="mt-10 md:mt-16 text-center text-sm font-medium tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg animate-in"
             borderRadius="20px"
@@ -35,6 +35,7 @@ function Hero() {
             Get started for free
           </ShimmerButton>
         </Link>
+
         <div className="mt-16">
           <Image
             src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2064"

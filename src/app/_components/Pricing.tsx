@@ -5,7 +5,7 @@ import React from "react";
 
 function Pricing() {
   return (
-    <section className="py-20">
+    <section className="py-20" id="pricing">
       <div className="container mx-auto p-4 text-center">
         <div className="text-sm text-center mb-10 gap-2 flex items-center justify-center text-[#6C6E74]">
           <svg
@@ -44,11 +44,11 @@ function Pricing() {
             <div className="w-full flex flex-col space-y-4 py-1">
               <div className="flex items-center space-x-2 text-black">
                 <CheckCircle className="w-4 h-4 text-gray-400" />
-                <span className="text-sm">Write and edit</span>
+                <span className="text-sm">Imagine and prompt</span>
               </div>
               <div className="flex items-center space-x-2 text-black">
                 <CheckCircle className="w-4 h-4 text-gray-400" />
-                <span className="text-sm">400 AI words per day</span>
+                <span className="text-sm">Upto 3 videos per day</span>
               </div>
             </div>
           </Card>

@@ -8,7 +8,7 @@ import {
 
 function Questions() {
   return (
-    <section className="py-20">
+    <section className="py-20 scroll-smooth" id="FAQ">
       <div className="container mx-auto p-4 text-center">
         <div className="text-sm text-center mb-10 gap-2 flex items-center justify-center text-[#6C6E74]">
           <svg
@@ -28,23 +28,42 @@ function Questions() {
           Platform, so you can make the most of its powerful features.
         </p>
       </div>
-      <Accordion type="single" collapsible className="mx-auto max-w-2xl mt-16">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <Accordion type="single" collapsible className="mx-auto md:max-w-2xl mt-16 max-w-lg">
+        <AccordionItem value="item-1" className="p-2">
+          <AccordionTrigger>
+            How does the AI video generator work?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            Our AI video generator takes your text input, images, or video clips
+            and automatically creates a video with AI-generated narration and
+            captions. You can customize the voice, style, and formatting to
+            match your needs.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionItem value="item-2" className="p-2">
+          <AccordionTrigger>
+            What languages does the AI support for captions and narration?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            As of now, it only supports English for both narration and captions.
+            But we intend to add more languages in the future.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionItem value="item-3" className="p-2">
+          <AccordionTrigger>Is there a free plan available?</AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            Yes, we offer a free plan with limited features, allowing you to
+            generate short videos with AI narration and captions.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-4" className="p-2"> 
+          <AccordionTrigger>
+            Can I generate videos from just text input?
+          </AccordionTrigger>
+          <AccordionContent>
+            Yes! Simply enter your script or text prompt, and our AI will
+            generate a complete video with visuals, narration, and captions
+            automatically.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
