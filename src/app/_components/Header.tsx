@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center py-4 px-7 bg-neutral-content backdrop-blur-sm sticky top-0 z-20 shadow-md ">
+    <div className="flex justify-between items-center py-4 px-7 bg-neutral-content backdrop-blur-sm sticky top-0 z-20 ">
       <div>
         <Link href="/">
           <span className="text-lg md:text-2xl hover:border-b border-black">
