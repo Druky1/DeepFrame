@@ -1,7 +1,7 @@
 import React from "react";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap } from "lucide-react";
+import { Mic, SquarePen, Zap } from "lucide-react";
 
 function Features() {
   return (
@@ -55,28 +55,26 @@ function Features() {
           <Card className="bg-card h-[250px] flex flex-col items-center justify-center border-2 border-primary/10 shadow-lg">
             <CardContent className="flex flex-col items-center justify-center p-4">
               <div className="rounded-full w-10 h-10 bg-primary/10 flex items-center justify-center mb-7">
-                <Zap className="h-6 w-6 text-primary" />
+                <SquarePen className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2 tracking-tight">
-                Lightning Fast
+                Unique Context
               </h3>
               <p className="text-muted-foreground tracking-tight">
-                Experience blazing-fast performance with our AI-powered video
-                generation.
+                Customize the video context to match your brand and style.
               </p>
             </CardContent>
           </Card>
           <Card className="bg-card h-[250px] flex flex-col items-center justify-center border-2 border-primary/10 shadow-lg">
             <CardContent className="flex flex-col items-center justify-center p-4">
               <div className="rounded-full w-10 h-10 bg-primary/10 flex items-center justify-center mb-7">
-                <Zap className="h-6 w-6 text-primary" />
+                <Mic className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2 tracking-tight">
-                Lightning Fast
+                AI-Powered Narration
               </h3>
               <p className="text-muted-foreground tracking-tight">
-                Experience blazing-fast performance with our AI-powered video
-                generation.
+                Bring your videos to life with AI narration & captions.
               </p>
             </CardContent>
           </Card>
