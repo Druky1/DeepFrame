@@ -47,7 +47,7 @@ function Features() {
                 Lightning Fast
               </h3>
               <p className="text-muted-foreground tracking-tight">
-                Experience blazing-fast performance with our AI-powered video
+                Experience blazing-fast performance with the AI-powered video
                 generation.
               </p>
             </CardContent>
@@ -74,7 +74,7 @@ function Features() {
                 AI-Powered Narration
               </h3>
               <p className="text-muted-foreground tracking-tight">
-                Bring your videos to life with AI narration & captions.
+                Bring your videos to life with AI narration & caption generation.
               </p>
             </CardContent>
           </Card>

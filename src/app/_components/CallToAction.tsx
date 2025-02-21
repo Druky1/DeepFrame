@@ -1,6 +1,7 @@
 import React from "react";
 import { Meteors } from "@/components/magicui/meteors";
 import { Button } from "@/components/ui/button";
+import  Link  from "next/link";
 
 function CallToAction() {
   return (
@@ -18,7 +19,7 @@ function CallToAction() {
         </p>
         <div className="flex items-center justify-center mt-10">
           <Button className="bg-white text-black shadow-lg hover:bg-black hover:text-white text-sm md:text-lg p-6 rounded-xl tracking-tight">
-            Get started for free
+            <Link href="/sign-in">Get started for free</Link>
           </Button>
         </div>
         <div className="mt-20 border-b border-dashed border-[#454545] "></div>

@@ -2,11 +2,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { UserButton, useUser } from "@clerk/nextjs";
 
 function Header() {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const { user } = useUser();
 
   return (
     <header className="flex justify-between items-center py-4 px-7 bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
@@ -19,7 +22,7 @@ function Header() {
       </div>
 
       {/* Navigation Links */}
-      <nav className="hidden md:flex justify-between items-center gap-12">
+      <nav className="hidden md:flex justify-between items-center gap-12 ">
         {["features", "pricing", "FAQ"].map((item) => (
           <button
             key={item}
@@ -29,8 +32,23 @@ function Header() {
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </button>
         ))}
+        <Link href="/dashboard">
+          {user ? (
+            <div>
+              <Button>Dashboard</Button>
+            </div>
+          ) : (
+            <></>
+          )}
+        </Link>
         <Link href="/sign-in">
-          <Button>Sign In</Button>
+          {user ? (
+            <div className="flex items-center">
+              <UserButton />
+            </div>
+          ) : (
+            <Button>Sign In</Button>
+          )}
         </Link>
       </nav>
     </header>

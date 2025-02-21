@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import React from "react";
+import GetStartedButton from "../_components/GetStartedButton"
 
 function Pricing() {
   return (
@@ -27,20 +27,16 @@ function Pricing() {
           fit.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto py-20">
+          {/* Free Plan */}
           <Card className="bg-card h-auto flex flex-col items-center justify-center border-2 border-primary/10 shadow-lg p-6">
             <div className="w-full flex flex-col items-start">
               <h1 className="text-lg font-medium tracking-tight">Free</h1>
               <h3 className="text-3xl font-light italic mt-3">$0</h3>
             </div>
-
             <div className="w-full mt-8 flex justify-center items-center">
-              <Button className="w-full rounded-lg bg-white border border-gray-300 shadow-sm text-black tracking-tight hover:bg-black hover:text-white">
-                Get started
-              </Button>
+              <GetStartedButton />
             </div>
-
             <div className="w-full border-b border-gray-300 border-dashed my-6"></div>
-
             <div className="w-full flex flex-col space-y-4 py-1">
               <div className="flex items-center space-x-2 text-black">
                 <CheckCircle className="w-4 h-4 text-gray-400" />
@@ -52,6 +48,8 @@ function Pricing() {
               </div>
             </div>
           </Card>
+
+          {/* Pro Annual Plan */}
           <Card className="bg-card h-auto flex flex-col items-center justify-center border-2 border-primary/10 shadow-lg p-6 bg-black text-white">
             <div className="w-full flex flex-col items-start">
               <h1 className="text-lg font-medium tracking-tight">
@@ -59,21 +57,15 @@ function Pricing() {
               </h1>
               <div className="text-3xl font-light italic mt-3">
                 $12
-                {" "}
                 <span className="text-sm font-medium tracking-tight text-gray-300">
                   / month, billed annually
                 </span>
               </div>
             </div>
-
             <div className="w-full mt-8 flex justify-center items-center">
-              <Button className="w-full rounded-lg bg-white border border-gray-300 shadow-sm text-black tracking-tight hover:bg-black hover:text-white">
-                Get started
-              </Button>
+              <GetStartedButton />
             </div>
-
             <div className="w-full border-b border-gray-500 border-dashed my-6"></div>
-
             <div className="w-full flex flex-col space-y-4 py-1">
               <div className="flex items-center space-x-2 text-white">
                 <CheckCircle className="w-4 h-4 text-gray-200" />
@@ -85,28 +77,22 @@ function Pricing() {
               </div>
             </div>
           </Card>
+
+          {/* Pro Monthly Plan */}
           <Card className="bg-card h-auto flex flex-col items-center justify-center border-2 border-primary/10 shadow-lg p-6">
             <div className="w-full flex flex-col items-start">
-              <h1 className="text-lg font-medium tracking-tight">
-                Pro - Monthly
-              </h1>
+              <h1 className="text-lg font-medium tracking-tight">Pro - Monthly</h1>
               <div className="text-3xl font-light italic mt-3">
                 $30
-                {" "}
                 <span className="text-sm font-medium tracking-tight text-gray-600">
                   / month
                 </span>
               </div>
             </div>
-
             <div className="w-full mt-8 flex justify-center items-center">
-              <Button className="w-full rounded-lg bg-white border border-gray-300 shadow-sm text-black tracking-tight hover:bg-black hover:text-white">
-                Get started
-              </Button>
+              <GetStartedButton />
             </div>
-
             <div className="w-full border-b border-gray-300 border-dashed my-6"></div>
-
             <div className="w-full flex flex-col space-y-4 py-1">
               <div className="flex items-center space-x-2 text-black">
                 <CheckCircle className="w-4 h-4 text-gray-400" />
@@ -118,7 +104,6 @@ function Pricing() {
               </div>
             </div>
           </Card>
-          
         </div>
       </div>
     </section>
