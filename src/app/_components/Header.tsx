@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { UserButton, useUser } from "@clerk/nextjs";
 
+
 function Header() {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +36,7 @@ function Header() {
         <Link href="/dashboard">
           {user ? (
             <div>
-              <Button>Dashboard</Button>
+              <Button className="text-sm">Dashboard</Button>
             </div>
           ) : (
             <></>
