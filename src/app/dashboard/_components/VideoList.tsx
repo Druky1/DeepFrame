@@ -25,7 +25,7 @@ function VideoList({ videoList }: VideoListProps) {
   }
 
   return (
-    <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-3">
       {videoList.map((video) => (
         <div key={video.id} className="cursor-pointer bg-black w-[200px] h-[360px] rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
         onClick={() => {

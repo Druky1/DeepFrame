@@ -1,15 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./_components/Header";
 import SideNav from "./_components/SideNav";
 import { VideoDataContext } from "../_context/VideoDataContext";
 import UserProvider from "./_components/UserProvider";
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
+
+  
   const [videoData, setVideoData] = useState([]);
   const value = React.useMemo(() => ({ videoData, setVideoData }), [videoData]);
 
+
   return (
+    
     <VideoDataContext.Provider value={value}>
       <UserProvider>
         {(user) => (
